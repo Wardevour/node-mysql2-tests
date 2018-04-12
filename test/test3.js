@@ -60,9 +60,9 @@ describe('Test database connection', function() {
         name: "steve"
       };
 
-      assert(results[0], 'results not as expected');
-      assert(results[0].id === expects.id, 'results not as expected');
-      assert(results[0].name === expects.name, 'results not as expected');
+      assert(results[0], 'results contains no rows');
+      assert(results[0].id === expects.id, 'result 0 has unexpected id');
+      assert(results[0].name === expects.name, 'result 0 has unexpected name');
 
       done();
     });
